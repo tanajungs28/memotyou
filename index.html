@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quality dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- タイトル表示 -->
+    <h1>品質ダッシュボード</h1>
+    <!-- ここにグラフ入れる -->
+
+
+    <!-- 事象の入力欄 -->
+    <main>
+        <!-- サブタイトル -->
+        <h2>【入力欄】</h2>
+        <!-- 各入力項目の欄 -->
+        <div class="input-area">
+          <input id="day" type="text" placeholder="日付">
+          <input id="name" type="text" placeholder="製品名">
+          <input id="classification" type="text" placeholder="分類">
+          <textarea id = "phenomenon" placeholder="事象"></textarea>
+          <input id="situation" type="text" placeholder="対応状況">
+        </div>
+    <!-- ボタン機能 -->
+        <div class="button-area">
+          <button id = "save">セーブ</button>
+          <button id = "clear">全て削除</button>
+        </div>
+      </main>
+      
+  <ul id ="list">
+    <!-- ここに追加データが挿入される -->
+  </ul>
+  <footer>
+    supported by tanajun
+  </footer>
+
+    <!-- jquery指定 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jsファイル指定 -->
+    <script src="js/test.js"></script>
+
+
+</body>
+
+
+</html>
