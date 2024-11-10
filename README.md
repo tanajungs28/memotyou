@@ -32,7 +32,7 @@
 
 ## ⑦質問・疑問・感想、シェアしたいこと等なんでも
 
-- [質問]特になし
+- [質問]セーブボタンを押した際はliタグで表上に表示されているが、ローカルストレージから引っ張ってくる際はtableタグに合うようにtr,tdタグにしないと表示されないのが解せない。。。
 
 
 - [感想]二週にわたってjavascriptやjqueryを集中的に使用したため理解度はかなり深まった。前回実装したいと思ってできなかったことが数多く実装できた点は満足している。
@@ -47,8 +47,8 @@
     ※JSON形式のデータをjavascript形式で見れるように戻す方法
    [https://www.granfairs.com/blog/entry-3191/]
 
-  - 3.モーダル画面の設定
-   [https://pengi-n.co.jp/column/design/modalwindow/]
+  - 3.[jQuery]LocalStorageを使ってテーブルに追加したレコードを保存するサンプル
+   [https://notepad-blog.com/content/130/]
 
   - 4.cssで体力ゲージを作る方法
    [https://csshtml.work/gauge/]

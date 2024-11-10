@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>quality dashboard</title>
+    <link rel="stylesheet" href="css/reset.css">    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+
     <!-- タイトル表示 -->
     <h1>品質ダッシュボード</h1>
     <!-- ここにグラフ入れる -->
-
+     <h2>【品質状況】</h2>
+    <div class="graph_area" >
+      <canvas id="chart"></canvas>
+    </div>
 
     <!-- 事象の入力欄 -->
     <main>
@@ -30,19 +36,34 @@
           <button id = "clear">全て削除</button>
         </div>
       </main>
-      
-  <ul id ="list">
-    <!-- ここに追加データが挿入される -->
-  </ul>
+  
+  <table>
+    <tr>
+      <th>製品名</th><th>日付</th><th>分類</th><th>事象</th><th>対応状況</th>
+    </tr>
+    <tbody id = "list"></tbody>
+    <!-- <tr id ="list"> -->
+      <!-- ここに追加データが挿入される -->
+    <!-- </tr> -->
+  </table>
+
+  <!-- <ul id ="list">
+    ここに追加データが挿入される
+  </ul>     -->
+
+  
+
   <footer>
     supported by tanajun
   </footer>
 
     <!-- jquery指定 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+     <!-- chart.js指定 -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.js" integrity="sha512-6HrPqAvK+lZElIZ4mZ64fyxIBTsaX5zAFZg2V/2WT+iKPrFzTzvx6QAsLW2OaLwobhMYBog/+bvmIEEGXi0p1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- jsファイル指定 -->
     <script src="js/test.js"></script>
-
+    <script src="js/data.js"></script>
 
 </body>
 
