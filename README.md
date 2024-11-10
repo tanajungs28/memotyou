@@ -43,8 +43,9 @@
   　※localstorageにデータを複数格納するためにJSONに変換する方法
    [https://qiita.com/shiho97797/items/30c1475363c587b60a75]
     
-  - 2.背景画像を複数枚指定する場合
-   [https://stand-4u.com/css/multiple-background-images.html]
+  - 2.ブラウザにデータを保存するlocalStorage（ローカルストレージ）の使い方
+    ※JSON形式のデータをjavascript形式で見れるように戻す方法
+   [https://www.granfairs.com/blog/entry-3191/]
 
   - 3.モーダル画面の設定
    [https://pengi-n.co.jp/column/design/modalwindow/]
