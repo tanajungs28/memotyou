@@ -50,8 +50,8 @@
   - 3.[jQuery]LocalStorageを使ってテーブルに追加したレコードを保存するサンプル
    [https://notepad-blog.com/content/130/]
 
-  - 4.cssで体力ゲージを作る方法
-   [https://csshtml.work/gauge/]
+  - 4.日付の入力欄を作成する
+   [https://catnose.me/learning/html/input-date]
 
   - 5.クリックイベントが2回（複数回）動くのは、.on()の重複が原因だった
    [https://qiita.com/7note/items/213944920efcc0f77de8]

@@ -24,11 +24,28 @@
         <h2>【入力欄】</h2>
         <!-- 各入力項目の欄 -->
         <div class="input-area">
-          <input id="name" type="text" placeholder="製品名">
-          <input id="day" type="text" placeholder="日付">
-          <input id="classification" type="text" placeholder="分類">
+          <!-- 車種選択のセレクトボックス -->
+          <select name="example1" id="select_car">
+            <option hidden>車種選択</option>
+            <option value="プリウス">プリウス</option>
+            <option value="アクア">アクア</option>
+            <option value="カローラ">カローラ</option>
+            <option value="クラウン">クラウン</option>
+            <option value="ヤリス">ヤリス</option>
+          </select>
+          <div id="selectValue" style="display: inline;"></div>
+          <input id="day" type="date" placeholder="日付">
+          <select name="example2" id="select_classification">
+            <option hidden>分類</option>
+            <option value="故障">故障</option>
+            <option value="問合せ">問合せ</option>
+          </select>
           <textarea id = "phenomenon" placeholder="事象"></textarea>
-          <input id="situation" type="text" placeholder="対応状況">
+          <select name="example3" id="select_situation">
+            <option hidden>対応状況</option>
+            <option value="完了">完了</option>
+            <option value="対応中">対応中</option>
+          </select>
         </div>
     <!-- ボタン機能 -->
         <div class="button-area">
@@ -37,22 +54,21 @@
         </div>
       </main>
   
+    <!-- 保存した後の表の記述 -->
   <table>
-    <tr>
-      <th>製品名</th><th>日付</th><th>分類</th><th>事象</th><th>対応状況</th>
-    </tr>
-    <tbody id = "list"></tbody>
-    <!-- <tr id ="list"> -->
+    <!-- 見出し部分を<thead>でくくる -->
+    <thead>
+      <tr>
+        <th>製品名</th><th>日付</th><th>分類</th><th>事象</th><th>対応状況</th>
+      </tr>
+    </thead>
+    <!-- 内容部分を<tbody>でくくる、中身はjsファイル内で記述 -->
+    <tbody id = "list">
       <!-- ここに追加データが挿入される -->
-    <!-- </tr> -->
+    </tbody>
   </table>
-
-  <!-- <ul id ="list">
-    ここに追加データが挿入される
-  </ul>     -->
-
   
-
+  <!-- フッターの記載 -->
   <footer>
     supported by tanajun
   </footer>
