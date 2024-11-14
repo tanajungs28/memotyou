@@ -7,7 +7,7 @@
 - ローカルストレージを活用し、入力フォーマットに入力した製品の故障件数をカウントしてくれるアプリ
 
 ## ③DEMO
-
+https://tanajungs28.github.io/memotyou/
 
 ## ④作ったアプリケーション用のIDまたはPasswordがある場合
 
