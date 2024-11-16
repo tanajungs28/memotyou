@@ -8,6 +8,7 @@
 
 ## ③DEMO
 https://tanajungs28.github.io/memotyou/
+https://tanajungs28.github.io/memotyou/
 
 ## ④作ったアプリケーション用のIDまたはPasswordがある場合
 
