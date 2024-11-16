@@ -33,10 +33,12 @@ let count12 = 0;
       const classification = $("#select_classification").val();       //分類の取得
       const phenomenon = $("#phenomenon").val();                      //事象の取得
       const situation = $("#select_situation").val();                 //日付情報を取得
-      let data = {name,day,classification, phenomenon, situation}     //オブジェクト{}としてデータを複数格納
+      const num = key_count;
+      let data = {name,day,classification, phenomenon, situation,num}     //オブジェクト{}としてデータを複数格納
       const jsonString = JSON.stringify(data);                        //JSON形式へ変換（valueに複数データを格納するため）
         localStorage.setItem(key_count, jsonString);                  //カウンタとそのほかのデータをローカルストレージに格納(製品名をkeyに設定)
         console.log("localStorage.key(key_count)===",localStorage.key(key_count))
+        console.log("localStorage.getItem(key_count)===",localStorage.getItem(key_count))
         console.log("localStorage.length===",localStorage.length)
         //HTMLの表に追記するためにlistに返す
         const html = `
@@ -65,6 +67,10 @@ let count12 = 0;
         });    
   
         // 更新を押した際、keyカウントの最後のものから表示してしまう誤動作ありのため修正必要
+        let array = []; //並び変えるための配列準備
+        let hikaku = [];//data内の並び替えを図るためのカウンターを格納する箱
+        // for(let m= 0; m < key_count; m++){
+
       //3.ページ読み込み：保存データ取得表示
       for(let i = 0; i < localStorage.length; i++){
         console.log("i===",i)
@@ -73,11 +79,19 @@ let count12 = 0;
         const getjson_data = localStorage.getItem(key_count);
         const data = JSON.parse(getjson_data);                  //JSON形式で取得した値をJSON.parse()してJaveScriptで使えるオブジェクトに戻す
         console.log(data.classification)
+        const redata = {key_count,data}
         // console.log("i:",i)
         // console.log("day:",data.day)
         var month = data.day.substr(5,2);                     //yyyy-mm-dd表記の中でmm部分を抽出する
         // console.log("month:",month)
         console.log("key_count:",key_count)
+
+        //ブラウザ更新時に入力した順番に表示するための
+        array.push(data);
+        hikaku.push(data.num);
+        console.log("array===",array)
+        console.log("array[i]===",array[i])
+        console.log("hikaku[i]===",hikaku[i])
 
         //グラフに特定の文字列の件数を積み重ねるためのカウンター
         if(data.classification === "故障"){
@@ -120,13 +134,36 @@ let count12 = 0;
             }
         }
         //HTMLのlistに返す(JSON形式⇒配列に戻したので配列形式で個別にデータを取得)
+      //   const html = `
+      //   <tr>
+      //     <td>${data.name}</td>
+      //     <td>${data.day}</td>
+      //     <td>${data.classification}</td>
+      //     <td>${data.phenomenon}</td>
+      //     <td>${data.situation}</td>
+      //   </tr>
+      //   `;
+      //  $("#list").append(html); 
+      }
+
+      //ブラウザ更新した際に入力した順番通りに表示されるように並び替えを実施
+      console.log("hikaku~~~",hikaku)
+      const sort = array.sort((a,b) => (a.num - b.num))
+      console.log(sort);
+      console.log(sort[0])
+      console.log(sort[1])
+      console.log(sort[2])
+      console.log(sort[3])
+      console.log("array~~~",array)
+      console.log("data~~~",)
+      for(let m = 0; m < sort.length; m++){
         const html = `
         <tr>
-          <td>${data.name}</td>
-          <td>${data.day}</td>
-          <td>${data.classification}</td>
-          <td>${data.phenomenon}</td>
-          <td>${data.situation}</td>
+          <td>${sort[m].name}</td>
+          <td>${sort[m].day}</td>
+          <td>${sort[m].classification}</td>
+          <td>${sort[m].phenomenon}</td>
+          <td>${sort[m].situation}</td>
         </tr>
         `;
        $("#list").append(html); 
