@@ -57,7 +57,8 @@ let count12 = 0;
           $("#day").val("")
           $("#select_classification").val("")
           $("#phenomenon").val("")
-          $("#select_situation").val("")
+      $("#select_situation").val("")
+      location.reload();
       });
   
       //2.clear クリックイベント
